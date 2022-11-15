@@ -8,6 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: jason-dour/action-setup-gomplate@v1.0.0
+        with:
+          gomplate-version: v3.10.0
         env:
           GITHUB_TOKEN: ${{ secrets.DEV_TOKEN }}
       - run: gomplate --version
